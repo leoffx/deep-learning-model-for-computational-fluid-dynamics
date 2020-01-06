@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
 from matplotlib import rc
+import tensorflow as tf
 
 def generate_simulation(model_parts, x_test, obj_test, frame_num = 100):
     """
@@ -86,16 +87,16 @@ def get_curl(fin):
     
     """
     vel = get_velocity(fin)
-    return (numpy.roll(vel[0,:,:,1],-1,axis=1) - numpy.roll(vel[0,:,:,1],1,axis=1) - numpy.roll(vel[0,:,:,0],-1,axis=0) + numpy.roll(vel[0,:,:,0],1,axis=0))
+    return (np.roll(vel[0,:,:,1],-1,axis=1) - np.roll(vel[0,:,:,1],1,axis=1) - np.roll(vel[0,:,:,0],-1,axis=0) + np.roll(vel[0,:,:,0],1,axis=0))
 	
-def make_animation(y_hat, concatenate_x_test = False, plot = 'vel'):
+def make_animation(y_hat, x_test = [], plot = 'vel'):
     """
     Returns an animation, given a LBM distribution
 
     Parameters
     ----------
     y_hat : An array of a LBM distribution (m, N, N, 9)
-    concatenate_x_test : {'True', 'False'}, optional
+    x_test : optional
         Whether to visualize the original animation side by side with the
         generated one
     plot : {'vel', 'div', 'curl'}, optional
@@ -106,8 +107,8 @@ def make_animation(y_hat, concatenate_x_test = False, plot = 'vel'):
     anim : matplotlib.animation object
 
     """
-
-    if concatenate_x_test:    
+    x_test = np.asarray(x_test)
+    if x_test:    
         predicConc = np.concatenate((y_hat, x_test), axis=2)
     else:
         predicConc = y_hat
@@ -141,6 +142,6 @@ def make_animation(y_hat, concatenate_x_test = False, plot = 'vel'):
         
         return (img,)
 
-    anim = animation.FuncAnimation(fig, animate, frames=predicSize, interval=100, blit=True)
+    anim = animation.FuncAnimation(fig, animate, frames=100, interval=100, blit=True)
     rc('animation', html='jshtml')
     return anim
