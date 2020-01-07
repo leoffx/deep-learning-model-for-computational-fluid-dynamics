@@ -15,6 +15,6 @@ By completely running the notebook it will be generated two files, one that stor
 
 Depending on the avaiable RAM, they can be split on multiple files by tweaking the `files_number` value. Others parameters like the simulation resolution and the number of examples created can be changed easily too, by adjusting, respectively, `simulation_size ` and `examples_number`.
 
-## Train the model
+### Train the model
 
 The model can be trained by running the `deep_learning_model_for_cfd.ipynb` using the `utils.py` file as a helper functions library.
