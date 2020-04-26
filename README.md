@@ -1,5 +1,7 @@
 # Deep Learning model for Computational Fluid Dynamics
 
+![](demo.gif)
+
 ## Prerequisites
 
 ### Setup TensorFlow
