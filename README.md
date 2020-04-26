@@ -1,4 +1,4 @@
-# Deep Learning model for Computational Fluid Dynamics
+# Deep Learning Model for Computational Fluid Dynamics
 
 <p align="center">
 <img src="demo.gif">
