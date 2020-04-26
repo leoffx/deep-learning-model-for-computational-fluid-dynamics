@@ -1,6 +1,8 @@
 # Deep Learning model for Computational Fluid Dynamics
 
-![](demo.gif)
+<p align="center">
+<img src="demo.gif">
+</p>
 
 ## Prerequisites
 
