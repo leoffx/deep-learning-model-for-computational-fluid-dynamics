@@ -8,7 +8,7 @@
 
 ### Setup TensorFlow
 
-This code was created and tested using TensorFlow 2.0 GPU on Google Colab. The installation can be done by running the command `!pip install tensorflow-gpu==2.0.0` before the imports.
+This code was created and tested using TensorFlow 2.0 GPU on Google Colab. The installation can be done by running the command `!pip install tensorflow-gpu==2.0.0` before the imports. Newer versions should work as well.
 
 
 ### Generate Dataset
@@ -26,5 +26,5 @@ The model can be trained by running the `deep_learning_model_for_cfd.ipynb` usin
 ### Results comparison
 
 <p align="center">
-<img src="figures/results.png" height=500>
+<img src="figures/results.png" height=400>
 </p>
