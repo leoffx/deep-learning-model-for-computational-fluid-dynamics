@@ -1,7 +1,7 @@
 # Deep Learning Model for Computational Fluid Dynamics
 
 <p align="center">
-<img src="demo.gif">
+<img src="figures/demo.gif">
 </p>
 
 ## Prerequisites
@@ -22,3 +22,9 @@ Depending on the avaiable RAM, they can be split on multiple files by tweaking t
 ### Train the model
 
 The model can be trained by running the `deep_learning_model_for_cfd.ipynb` using the `utils.py` file as a helper functions library.
+
+### Results comparison
+
+<p align="center">
+<img src="figures/results.png" height=500>
+</p>
