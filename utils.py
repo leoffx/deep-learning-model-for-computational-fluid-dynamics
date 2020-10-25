@@ -30,7 +30,7 @@ def generate_simulation(model_parts, x_test, obj_test, frame_num = 100):
     compressed, b_add, b_mul = model_encoder_state.predict([predic[0:1], obj])
     for i in range(frame_num-1):
         predic[i+1] = model_decoder_state.predict([compressed])
-        compressed, _, _ = model_compression_mapping.predict([compressed, b_add, b_mul]) 
+        compressed = model_compression_mapping.predict([compressed, b_add, b_mul]) 
     return predic
 	
 def get_velocity(fin):
